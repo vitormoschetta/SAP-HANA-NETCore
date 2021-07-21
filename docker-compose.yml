@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  db:
+    image: store/saplabs/hanaexpress:2.00.045.00.20200121.1
+    container_name: saphana_express
+    command: ['--passwords-url', 'file:///hana/password.json', '--agree-to-sap-license']
+    ulimits:
+      nofile: 1048576
+    sysctls:
+      - kernel.shmmax=1073741824
+      - net.ipv4.ip_local_port_range=40000 60999
+      - kernel.shmmni=4096
+      - kernel.shmall=8388608
+    volumes:
+      - volume-hana:/hana/mounts
+      - ./config/password.json:/hana/password.json      
+    ports:
+      - 39013:39013
+      - 39017:39017
+      - 39041-39045:39041-39045
+      - 1128-1129:1128-1129
+      - 59013-59014:59013-59014
+
+volumes:
+  volume-hana:
