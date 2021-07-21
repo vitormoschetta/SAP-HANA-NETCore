@@ -11,7 +11,7 @@ docker-compose up -d --build
 
 ### Install SAP HANA Client:
 
-[Instalação do Client SAP Hana](https://bionexo.atlassian.net/wiki/spaces/IE/pages/2285240397/Instala+o+do+Client+SAP+Hana)
+[Instalação do Client SAP Hana](https://developers.sap.com/tutorials/hana-clients-install.html)
 
 
 ##### Path installation:
