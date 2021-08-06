@@ -5,12 +5,18 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>         
-    <PackageReference Include="SapHanaConnectorDependencies" Version="1.0.0" />
-    <!-- <Reference Include="Sap.Data.Hana.Core.v2.1">      
-      <HintPath Condition="Exists('/SapHanaBionexo/dotnetcore/v2.1')">/SapHanaBionexo/dotnetcore/v2.1/Sap.Data.Hana.Core.v2.1.dll</HintPath>
-      <HintPath Condition="Exists('C:\SapHanaBionexo\dotnetcore\v2.1')">C:\SapHanaBionexo\dotnetcore\v2.1\Sap.Data.Hana.Core.v2.1.dll</HintPath>
-    </Reference> -->
+  <ItemGroup>             
+    <Reference Include="Sap.Data.Hana.Core.v2.1">      
+      <HintPath Condition="Exists('/SapHana/dotnetcore/v2.1')">/SapHana/dotnetcore/v2.1/Sap.Data.Hana.Core.v2.1.dll</HintPath>
+      <HintPath Condition="Exists('C:\SapHana\dotnetcore\v2.1')">C:\SapHana\dotnetcore\v2.1\Sap.Data.Hana.Core.v2.1.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.35" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="3.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Npgsql" Version="5.0.7" />
   </ItemGroup>
 
 </Project>

@@ -13,3 +13,15 @@ docker-compose up -d --build
 
 [Instalação do Client SAP Hana](https://developers.sap.com/tutorials/hana-clients-install.html)
 
+
+Add in this folder:
+
+1. Linux:
+```
+/SapHana
+```
+
+2. Windows:
+```
+C:\SapHana
+```

@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-  db:
+  dbsaphana:
     image: store/saplabs/hanaexpress:2.00.045.00.20200121.1
     container_name: saphana_express
     command: ['--passwords-url', 'file:///hana/password.json', '--agree-to-sap-license']
@@ -21,6 +21,17 @@ services:
       - 39041-39045:39041-39045
       - 1128-1129:1128-1129
       - 59013-59014:59013-59014
+
+  dbpostgres:
+    container_name: postgresql
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - 5499:5432
+    expose:
+      - 5499  
 
 volumes:
   volume-hana:
