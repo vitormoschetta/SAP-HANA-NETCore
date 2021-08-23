@@ -1,0 +1,14 @@
+
+SELECT p.* FROM PRODUCT p 
+SELECT p.ID, p.NAME, p.PRICE FROM PRODUCT p
+
+SELECT
+	column_name AS name,
+	data_type_name AS TYPE,
+	LENGTH AS PRECISION,
+	SCALE AS SCALE
+FROM
+	TABLE_COLUMNS
+WHERE
+	schema_name = 'SYSTEM'
+	AND table_name = 'PRODUCT'
