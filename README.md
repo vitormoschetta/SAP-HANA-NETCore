@@ -25,3 +25,8 @@ Add in this folder:
 ```
 C:\SapHana
 ```
+
+
+
+### Add seeds
+Execute SQL commands in seeds folder.
