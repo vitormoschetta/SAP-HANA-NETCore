@@ -20,11 +20,6 @@ namespace src
             var password = "Password854*";
             var others = "encrypt=true;sslValidateCertificate=false";
 
-            JsonConvert.DefaultSettings = () => new JsonSerializerSettings
-            {
-                Converters = new List<JsonConverter> { new StringDecimalConverter() }
-            };
-           
             try
             {
                 using (var conn = new HanaConnection($"Server={server};UID={user};PWD={password}; {others}"))
@@ -40,6 +35,11 @@ namespace src
                     {
                         Console.WriteLine(row);
                     }
+
+                    JsonConvert.DefaultSettings = () => new JsonSerializerSettings
+                    {
+                        Converters = new List<JsonConverter> { new StringDecimalConverter() }
+                    };
 
                     var jsonResult = JToken.FromObject(queryResult);
 
